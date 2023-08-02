@@ -1,0 +1,80 @@
+/* ##################### Navbar Styling Section ######################### */
+
+.navbar{
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    /* opacity: 0.65; */
+    box-shadow: 0px 5px 10px 0px #333;
+}
+
+.nav--hidden{
+    transform: translateY(-80px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar .navbar-items{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .navbar-items .logo{
+    margin: 0.5rem 3rem;
+}
+
+.navbar .navbar-items .logo a{
+    text-decoration: none;
+}
+
+.navbar .navbar-items .logo a img{
+    height: 4.3rem;
+}
+
+.navbar .navbar-items .menu .menu-items{
+    display: flex;
+    list-style: none;
+}
+
+.navbar .navbar-items .menu .menu-items a{
+    text-decoration: none;
+    color: #000;
+    padding: 10px 0;
+    position: relative;
+}
+
+.navbar .navbar-items .menu .menu-items a::after{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: #EF3F49;
+}
+
+.navbar .navbar-items .menu .menu-items .mitem{
+    padding: 2rem 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar .navbar-items .menu .menu-items a:hover::after{
+    left: 0;
+    width: 100%;
+    transition:  all 0.3s ease-in-out;
+}
+
+.navbar .navbar-items .menu .menu-items a:hover,
+.navbar .navbar-items .menu .menu-items a:active{
+    color: #EF3F49;
+}
+
+.navbar .navbar-items .menu .menu-items .active-menu{
+    color: #EF3F49;
+}
+
+.hamburger-lines{
+    display: none;
+}
